@@ -1,0 +1,87 @@
+/* Основные стили */
+.calendar {
+  width: 90%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #00aaff;
+  color: white;
+}
+
+.header .col-start,
+.header .col-end {
+  cursor: pointer;
+}
+
+.days {
+  display: flex;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #eee;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.cell {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  padding: 5px;
+}
+
+.cell:hover {
+  background-color: #f1f1f1;
+}
+
+.cell.selected {
+  background-color: #00aaff;
+  color: white;
+}
+
+.cell.disabled {
+  background-color: #f0f0f0;
+  color: #ddd;
+}
+
+.number {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.meeting {
+  background-color: #ffeb3b;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #000;
+  word-wrap: break-word;
+}
+
+.cell.has-meeting {
+  background-color: #ffcccc;
+}
